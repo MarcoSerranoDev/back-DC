@@ -8,8 +8,7 @@ const sentMeMail = async (req, res, next) => {
           <h2>${name} se quiere contactar</h2>
           <p><b>Email:</b> ${email}</p>
           <p><b>Numero:</b> ${phone}</p>
-          <p><b>Mensaje:</b> ${message}</p>
-          
+          <p><b>Mensaje:</b> ${message}</p>    
       </div>
     `;
     const transporter = nodemailer.createTransport({
@@ -26,8 +25,8 @@ const sentMeMail = async (req, res, next) => {
     });
 
     let info = await transporter.sendMail({
-      from: '"KBoard Music" <info@kboardmusic.com>', // sender address,
-      to: "info@kboardmusic.com",
+      from: '"Drumco Drums" <andres.cuevas@hermesm-music.com.mx>', // sender address,
+      to: "andres.cuevas@hermes-music.com.mx",
       subject: "Mensaje contacto",
       html: contentHTML,
     });
