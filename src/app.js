@@ -17,6 +17,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Routes
-app.use("/app/v1/email", emailRoutes);
+app.use("/api/v1/email", emailRoutes);
 
 module.exports = app;

@@ -25,7 +25,7 @@ const sentMeMail = async (req, res, next) => {
     });
 
     let info = await transporter.sendMail({
-      from: '"Drumco Drums" <andres.cuevas@hermesm-music.com.mx>', // sender address,
+      from: '"Drumco Drums" <andres.cuevas@hermes-music.com.mx>', // sender address,
       to: "andres.cuevas@hermes-music.com.mx",
       subject: "Mensaje contacto",
       html: contentHTML,
@@ -35,3 +35,5 @@ const sentMeMail = async (req, res, next) => {
     next(error);
   }
 };
+
+module.exports = { sentMeMail };
