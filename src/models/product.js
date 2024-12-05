@@ -1,4 +1,4 @@
-const { model, Schema } = require("mongoose");
+const { model, Schema } = require('mongoose');
 
 const Product = new Schema({
   id: Number,
@@ -17,6 +17,7 @@ const Product = new Schema({
   },
   urlImg: String,
   rutas: [String],
+  series: { type: String },
 });
 
-module.exports = model("Product", Product);
+module.exports = model('Product', Product);
