@@ -18,6 +18,10 @@ const Product = new Schema({
   urlImg: String,
   rutas: [String],
   series: { type: String },
+  removed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = model('Product', Product);
